@@ -100,7 +100,7 @@ class CabBooking(models.Model):
             minute_charge = minutes * self.CHARGE_PER_MINUTE
 
             total_charge = distance_charge + minute_charge
-            if self.cab.color_is_pink:  # if cab color is pink then extra 5 dogecoin.
+            if self.cab.color_is_pink():  # if cab color is pink then extra 5 dogecoin.
                 total_charge += self.PINK_CAB_CHARGE
 
             self.fare = total_charge

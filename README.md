@@ -16,7 +16,7 @@ Fuber App
 
 4. Virtualenv Setup
     * virtualenv env
-    * source bin/activate
+    * source env/bin/activate
     * deactivate
 
 5. Install requirements
