@@ -92,9 +92,6 @@ DATABASES = {
     }
 }
 
-if 'test' in sys.argv:
-    DATABASES['default'] = {'ENGINE': 'django.db.backends.sqlite3'}
-
 
 LANGUAGE_CODE = 'en-us'
 

@@ -1,3 +1,10 @@
-Django==1.9
-djangorestframework==3.3.1
+Django==1.8.5
+django-cors-headers==1.1.0
+django-suit==0.2.18
+djangorestframework==3.2.2
+gunicorn==19.4.5
+MySQL-python==1.2.5
+python-dateutil==2.5.2
+requests==2.9.1
+six==1.10.0
 wheel==0.24.0

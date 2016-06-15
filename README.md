@@ -29,13 +29,11 @@ Fuber App
    * python manage.py runserver 8000
    
 8. Test django app
-    * python manage.py test
+   * python manage.py test apps.apis.fuber -k -v 3
 
 
  Rest API Documentation
 -----------------------------
-
-##**Fuber API**
 
 #### **Start Trip**
 

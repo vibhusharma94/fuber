@@ -35,7 +35,6 @@ class Cab(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        get_latest_by = 'created'
         db_table = "cab"
 
     def __unicode__(self):
@@ -72,7 +71,6 @@ class CabBooking(models.Model):
     is_running = models.BooleanField(default=True)
 
     class Meta:
-        get_latest_by = 'created'
         db_table = "cab_booking"
 
     def __unicode__(self):
