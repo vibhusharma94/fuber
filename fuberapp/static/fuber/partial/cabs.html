@@ -1,0 +1,83 @@
+<div class="container">
+  
+  <div class="page-header">
+      <h2 style="text-align:center">FUBER</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Available Cabs
+                <a href="" class="pull-right" ng-click="start_trip()"><b>Book Cab</b></a>
+            </div>
+            <table class="table">
+
+                <thead> 
+                    <tr> 
+                        <th>#</th>
+                        <th>Cab</th> 
+                    </tr> 
+                </thead> 
+
+                <tbody> 
+
+                    <tr ng-repeat="cab in cabs"> 
+                        <td class="task-icon">
+                            <i class="fa fa-car fa-lg" style="color:#c3c3c3"></i>
+                            </span>
+                        </td>
+                        <td>
+                            {{ cab.cab_type }} {{ cab.number }} ( {{ cab.color }} )
+                        </td> 
+                    </tr> 
+
+                </tbody>
+
+            </table> 
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">Trips</div>
+            <table class="table">
+
+                <thead> 
+                    <tr> 
+                        <th>Pickup</th>
+                        <th>Driver</th>
+                        <th>Fare</th> 
+                        <th>Car</th> 
+                        <th>Status</th> 
+                    </tr> 
+                </thead> 
+
+                <tbody> 
+
+                    <tr ng-repeat="trip in bookings"> 
+                        <td> {{ trip.pickup_time | date : 'short' }}</td>
+                        <td>
+                            {{ trip.cab.driver_name }}
+                        </td>
+                        <td> {{ trip.fare }} dogecoin </td>
+                        <td>
+                            {{ trip.cab.cab_type }} {{ trip.cab.number }} ( {{ trip.cab.color }} )
+                        </td>                        
+                        
+                        <td class="task-icon">
+                          <button class="btn btn-danger" ng-if="trip.is_running" ng-click="end_trip(trip)">End Trip</button>
+                          <span ng-if="!trip.is_running">Trip completed</span>
+                        </td> 
+                    </tr> 
+
+                </tbody>
+
+            </table> 
+        </div>
+    </div>
+
+  </div>
+
+</div>
+
+

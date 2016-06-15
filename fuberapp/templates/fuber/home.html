@@ -1,0 +1,26 @@
+{% extends "fuber/base.html" %}
+{% block head_title %}{% endblock %}
+
+{% block top_css %}
+        <link rel="stylesheet" href="/static/fuber/css/main.css" type="text/css">
+{% endblock top_css %}
+
+{% block body %}
+        
+    <div ui-view ></div>   
+              
+{% endblock %}
+
+{% block footer_js %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script> 
+
+        <script src="/static/fuber/js/app.js"></script>
+        <script src="/static/fuber/js/ApiService.js"></script>
+        <script src="/static/fuber/js/main.js"></script> 
+        <script src="/static/fuber/js/directive.js"></script>    
+{% endblock footer_js %}
+
